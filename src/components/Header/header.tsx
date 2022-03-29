@@ -8,8 +8,6 @@ import styles from "./header.module.scss";
 export const Header = () => {
   const router = useRouter();
 
-  console.log(router);
-
   return (
     <header className={styles.header}>
       <div className={styles.main}>
