@@ -1,11 +1,14 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 import React from "react";
 
 import styles from "./menu.module.scss";
 
 const Menu = () => {
+  const router = useRouter();
+
   return (
-    <div className={styles.menuWrap}>
+    <nav className={styles.menuWrap}>
       <input type="checkbox" className={styles.toggler} />
       <div className={styles.hamburger}>
         <div></div>
@@ -14,10 +17,28 @@ const Menu = () => {
         <div>
           <div>
             <Link href="/blog">
-              <a className={styles.menuItem}>blog</a>
+              <a
+                className={styles.menuItem}
+                style={
+                  router?.route === "/blog"
+                    ? { borderBottom: "2px solid #000" }
+                    : {}
+                }
+              >
+                blog
+              </a>
             </Link>
             <Link href="/contact">
-              <a className={styles.menuItem}>kontakt</a>
+              <a
+                className={styles.menuItem}
+                style={
+                  router?.route === "/contact"
+                    ? { borderBottom: "2px solid #000" }
+                    : {}
+                }
+              >
+                kontakt
+              </a>
             </Link>
             <a
               href={"https://fordas.pl/Portfolio/index"}
@@ -35,7 +56,7 @@ const Menu = () => {
           </div>
         </div>
       </div>
-    </div>
+    </nav>
   );
 };
 

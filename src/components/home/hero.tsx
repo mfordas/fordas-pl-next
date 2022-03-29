@@ -1,6 +1,5 @@
 import Image from "next/image";
 
-import myImage from "../../images/mf.png";
 import styles from "./hero.module.scss";
 
 export const Hero = () => {
@@ -9,7 +8,13 @@ export const Hero = () => {
       <div className={styles.aboutMeContainer}>
         <div className={styles.aboutMeContent}>
           <div className={styles.image}>
-            <Image alt="mfordas photo" src={myImage} layout="responsive" />
+            <Image
+              alt="mfordas photo"
+              src={"/images/mf.png"}
+              width={300}
+              height={300}
+              layout="responsive"
+            />
           </div>
           <p>
             Cześć, nazywam się Mateusz Fordas. Ukończyłem studia na kierunku
