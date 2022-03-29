@@ -1,0 +1,22 @@
+.blogPostMiniatureContainer {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  min-width: 300px;
+  padding: 1rem;
+
+  .imageContainer {
+    width: 100%;
+
+    > span {
+      position: unset !important;
+    }
+
+    .image {
+      object-fit: contain;
+      width: 100% !important;
+      position: relative !important;
+      height: unset !important;
+    }
+  }
+}
